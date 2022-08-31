@@ -1,0 +1,8 @@
+org.springframework.context.ApplicationContextInitializer=\
+  com.kaede.principle.listener.MyApplicationContextInitializer
+
+org.springframework.context.ApplicationListener=\
+  com.kaede.principle.listener.MyApplicationListener
+
+org.springframework.boot.SpringApplicationRunListener=\
+  com.kaede.principle.listener.MySpringApplicationRunListener

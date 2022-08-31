@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.kaede.hello.auto.HelloServiceAutoConfiguration

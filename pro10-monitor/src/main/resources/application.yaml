@@ -1,0 +1,47 @@
+management:
+  endpoints:
+    # 关闭所有监控端点（默认开启）
+    # 开启让第三方开源项目获取所有信息
+    enabled-by-default: true
+    web:
+      exposure:
+        # 以web方式暴露所有端点（默认关闭）
+        include: '*'
+  endpoint:
+    health:
+      # 显示详细信息
+      show-details: always
+      # 在被关闭的情况下，可以设为true手动开启端点
+      enabled: true
+    metrics:
+      enabled: true
+    info:
+      enabled: true
+    beans:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+info:
+  appName: boot-monitor
+  appVersion: 1.0.0
+  author: kaede
+  # 从pom.xml中获取信息
+  mavenProjectName: @project.artifactId@
+  mavenProjectVersion: @project.version@
+
+spring:
+  boot:
+    admin:
+      client:
+        # 该客户端将数据汇报给的服务器的地址（第三方开源项目）
+        url: http://localhost:8081
+        instance:
+          # 默认使用主机名注册实例，可以改为使用IP注册实例
+          # http://desktop-faro1oo:8080/
+          # http://192.168.10.22:8080/
+          prefer-ip: true
+  application:
+    # 修改当前应用名，默认名是spring-boot-application
+    name: pro10-monitor

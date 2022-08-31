@@ -1,0 +1,16 @@
+server:
+  servlet:
+    # 修改应用程序上下文路径，默认为/
+    context-path: /web
+  error:
+    # 错误处理页面，默认是/error
+    path: /error
+
+spring:
+  servlet:
+    multipart:
+      # 修改单个文件上传的最大大小，默认为1MB
+      max-file-size: 10MB
+      # 整个请求所上传的文件的最大大小
+      max-request-size: 100MB
+

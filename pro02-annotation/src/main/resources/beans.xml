@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 以前用Spring XML或者注解配置的方式将组件添加到容器中 -->
+
+    <bean id="xmlUser" class="com.kaede.boot.bean.User">
+        <property name="name" value="zhangsan"></property>
+        <property name="age" value="18"></property>
+    </bean>
+
+    <bean id="xmlCat" class="com.kaede.boot.bean.Pet">
+        <property name="name" value="tomcat"></property>
+    </bean>
+</beans>

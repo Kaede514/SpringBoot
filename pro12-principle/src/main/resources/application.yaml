@@ -1,0 +1,17 @@
+person:
+  name: default
+
+spring:
+  profiles:
+    # 激活特定环境
+#    active: online
+    # 根据组激活环境
+    active: myonline
+    # 分组
+    group:
+      myonline[0]: online
+      myonline[1]: online2
+      mytest[0]: test
+
+server:
+  port: 8088

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.kaede</groupId>
+    <artifactId>pro01-helloworld</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <!-- 引入SpringBoot进行开发所需，作为父项目管理依赖（版本统一），
+        它的父项目spring-boot-dependencies几乎声明了所有开发中常用的
+        jar的版本号（自动版本仲裁机制），以后引入依赖默认都可以不写版本
+        号，但引入的非版本仲裁的jar一定要写版本号
+    -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.4.RELEASE</version>
+    </parent>
+
+    <!-- 自定义修改所需依赖的版本号步骤：
+        查看spring-boot-dependencies中规定的当前依赖的版本，
+        然后在当前项目中重写所需的版本
+    -->
+    <properties>
+        <mysql.version>5.1.37</mysql.version>
+    </properties>
+
+    <dependencies>
+        <!-- 引入SpringBoot进行web开发所需，因为有父项目进行版本管理，故无需写版本号
+            在SpringBoot中经常见到spring-boot-starter-*，*代表某种场景，只要引入
+            某种场景的starter，该场景所需要的常规依赖都会自动引入（maven的依赖传递原则）
+            （像*-spring-boot-starter-xx一般是第三方提供的简化开发的场景启动器），所有
+            场景启动器最底层的依赖都会依赖spring-boot-starter
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- 引入mysql依赖，但通过在spring-boot-dependencies中搜索mysql.version
+            发现版本为8.0.21，本地数据库为mysql5.7相关数据库，则需改变mysql驱动版本
+            （实际上mysql8的依赖兼容mysql5.7版本）
+        -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+    </dependencies>
+
+    <!-- maven默认打包方式为jar，以前将项目打成war包，然后将war包部署到tomcat
+        服务器上运行，现在简化部署，只需引入SpringBoot提供的以下插件，就可将项目
+        打成自带整套运行环境的jar包
+    -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.3.12.RELEASE</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>

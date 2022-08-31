@@ -1,0 +1,5 @@
+person:
+  name: zhangsan
+
+server:
+  port: 8080

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+	<link rel="stylesheet" th:href="@{/css/table.css}">
+</head>
+<body>
+
+<div>
+	<div id="div1">
+		<h1>main.html</h1>
+	</div>
+	<div id="div2">
+		<span>[[${session.loginUser.userName}]]</span>
+	</div>
+	<div id="div3">
+		<br/>
+		<a th:href="@{/table}">table</a><br/>
+		<br/>
+		<a th:href="@{/form}">form</a>
+		<br/>
+		<a th:href="@{/ex}">ex</a>
+	</div>
+	<div id="div4">
+		<table>
+			<tr>
+				<th>用户名</th>
+				<th>密码</th>
+			</tr>
+			<tr th:each="user : ${users}">
+				<td>[[${user.userName}]]</td>
+				<td>[[${user.password}]]</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+</body>
+</html>

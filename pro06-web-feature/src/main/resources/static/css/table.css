@@ -1,0 +1,43 @@
+body {
+    overflow-x: hidden;
+}
+
+body, div, form, ul, ol, dl, li, table, th, td, tr, p, h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0;
+}
+
+#head{
+    width: 100vw;
+    height: 4vw;
+    border: 1px solid blue;
+}
+
+#div1{
+    width: 80vw;
+    height:4vw;
+    line-height: 4vw;
+}
+
+#div2{
+    width: 20vw;
+    height: 4vw;
+    background-color: pink;
+    line-height: 4vw;
+    position: absolute;
+    top: 0;
+    left: 80vw;
+}
+
+#div3{
+    border: 1px solid red;
+    width: 10vw;
+    height: 44vw;
+}
+
+#div4{
+    border: 1px solid red;
+    position: absolute;
+    top: 4vw;
+    left: 10vw;
+}

@@ -1,0 +1,8 @@
+#spring:
+#  mvc:
+#    servlet:
+#      path: /mvc
+
+#server:
+#  # 端口号默认为8080
+#  port: 8080

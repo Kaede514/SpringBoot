@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<h1>success</h1>
+<h2 th:text="${msg}"></h2>
+<a th:href="${link}">go to baidu</a><br/>
+<a th:href="@{link}">go to baidu</a><br/>
+<!-- /为绝对路径，thymeleaf会自动加上应用程序上下文路径 -->
+<a th:href="@{/link}">go to baidu</a><br/>
+
+</body>
+</html>

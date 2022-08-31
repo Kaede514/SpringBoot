@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+	<link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+
+<div id="app">
+
+	<form th:action="@{/login}" method="post">
+		<br/>
+		<label style="color: red;display: block">[[${msg}]]</label>
+		<input type="text" name="userName" value="kaede" placeholder="请输入用户名"/><br/><br/>
+		<input type="password" name="password" value="123456" placeholder="请输入密码"/><br/><br/>
+		<input type="submit" value="登录"/>
+	</form>
+
+</div>
+
+</body>
+</html>

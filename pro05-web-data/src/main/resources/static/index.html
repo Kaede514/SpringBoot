@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+	<link rel="stylesheet" href="css/element-ui.min.css">
+	<script src="js/vue.min.js"></script>
+	<script src="js/element-ui.min.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+	<h2>测试Rest风格</h2>
+	<form action="/user" method="get">
+		<el-button type="success" plain>GET请求</el-button>
+		<input type="submit"/>
+	</form>
+	<hr/>
+	<form action="/user" method="post">
+		<el-button type="success" plain>POST请求</el-button>
+		<input type="submit"/>
+	</form>
+	<hr/>
+	<form action="/user" method="post">
+		<input type="hidden" name="_m" value="PUT">
+		<el-button type="success" plain>PUT请求</el-button>
+		<input type="submit"/>
+	</form>
+	<hr/>
+	<form action="/user" method="post">
+		<input type="hidden" name="_m" value="DELETE">
+		<el-button type="success" plain>DELETE请求</el-button>
+		<input type="submit"/>
+	</form>
+	<hr/>
+
+	<h2>基本注解测试</h2>
+	<a href="car/1/owner/lisi?age=18&hobby=game&hobby=anime">car info</a>
+	<hr>
+	<form action="/save" method="post">
+		<p>用户名：<input type="text" name="username" placeholder="请输入用户名"/></p>
+		<p>密&#12288;码：<input type="password" name="password" placeholder="请输入密码"/></p>
+		<p><input type="submit"/></p>
+	</form>
+
+	<h2>测试矩阵变量</h2>
+	<a href="/cars/sell;low=34;brand=byd,audi,yd">矩阵变量</a><br/>
+	<a href="/boss/1;age=20/2;age=18">矩阵变量</a><br/>
+
+	<h2>测试封装pojo</h2>
+	<form action="/saveuser" method="post">
+		姓名：<input type="text" name="userName" value="zhangsan" /><br/>
+		年龄：<input type="text" name="age" value="18" /><br/>
+		生日：<input type="text" name="birth" value="2020/1/1" /><br/>
+		宠物：<input type="text" name="pet" value="dolu,3"/><br/>
+		<!-- 宠物姓名：<input type="text" name="pet.name" value="dolu"/><br/> -->
+		<!-- 宠物年龄：<input type="text" name="pet.age" value="3"/><br/> -->
+		<input type="submit"/>
+	</form>
+
+</div>
+
+<script>
+    let app = new Vue({
+		el: '#app'
+	});
+</script>
+
+</body>
+</html>

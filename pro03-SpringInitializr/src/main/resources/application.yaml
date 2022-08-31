@@ -1,0 +1,34 @@
+# 首选将属性配置在yaml里
+# "zhangsan /n lisi" 会将\n作为换行输出
+# 'zhangsan /n lisi' 会将\n作为字符串输出
+# ""不会转义，''会转义（改变原本的行为）
+# 在yaml中 -n 代表 N，表示字母大写
+person:
+  userName: zhangsan
+  boss: true
+  birth: 2019/12/1
+  age: 18
+  pet:
+    name: tom
+    weight: 10.6
+#  interests: [anime, game, music]
+  interests:
+    - anime
+    - game
+    - music
+  animal: [cat, dog, mouse]
+#  score:
+#    english: 80
+#    math: 90
+  score: {english: 80, math: 90}
+  salarys: [8000.88, 9000.99]
+  allPets:
+    healthy:
+      - {name: "jerry", weight: 10}
+      - {name: "jack", weight: 20}
+    sick:
+      - name: "luck"
+        weight: 30
+      - name: "toc"
+        weight: 40
+
