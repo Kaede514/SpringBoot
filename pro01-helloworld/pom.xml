@@ -42,7 +42,6 @@
 
         <!-- 引入mysql依赖，但通过在spring-boot-dependencies中搜索mysql.version
             发现版本为8.0.21，本地数据库为mysql5.7相关数据库，则需改变mysql驱动版本
-            （实际上mysql8的依赖兼容mysql5.7版本）
         -->
         <dependency>
             <groupId>mysql</groupId>

@@ -24,7 +24,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @AfterAll：在所有单元测试方法结束之后执行（静态方法）
  * @Disabled：表示测试类或测试方法不执行
  * @Timeout：表示测试方法运行如果超过了指定时间将会返回错误
- * @@RepeatedTest：表示测试方法执行的次数
+ * @RepeatedTest：表示测试方法执行的次数
  * @ExtendWith：为测试类或测试方法提供扩展类引用
  * ps：在类上标注@SpringBootTest就可以使用Spring的功能，如@Autowired
  * @SpringBootTest中含@BootstrapWith(SpringBootTestContextBootstrapper.class)

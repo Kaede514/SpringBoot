@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * SQL
  * 1、数据源的自动配置
  *    1）导入jdbc场景（内含数据源、jdbc、事务、）
- *    2）导入mysql驱动（8版本驱动兼容mysql5版本）
+ *    2）导入mysql驱动
  *       若要修改版本：1、直接依赖引入具体版本（maven的就近依赖原则）
  *                   2、重新声明版本（maven的属性的就近优先原则）
  *    3）分析自动配置并修改配置项

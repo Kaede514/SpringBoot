@@ -49,7 +49,7 @@ public class RequestController {
     }
 
     /*
-        1、矩阵变量语法：用;隔开键值对，多个变量以;区分，每个变量的第一个;前是
+        1、矩阵变量语法：用;隔开键值对，多个变量以/区分，每个变量的第一个;前是
            访问路径，;后是矩阵变量
             /cars/sell;low=34;brand=byd,audi,yd
             /boss/1;age=20/2;age=18

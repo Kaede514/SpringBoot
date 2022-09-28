@@ -59,7 +59,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
  *    3）web应用实现WebMvcConfigurer即可定制化web功能（重要） + @Bean给容器中再扩展一些功能
  *      （也可在配置类中使用@Bean将WebMvcConfigurer放入容器中）
  *      （再加上@EnableWebMvc会全面接管SpringMVC，SpringMVC的自动配置会全部失效）
- *      原理：1）WebMvcConfiguration是默认的SpringMVC的自动配置功能类（静态资源...）
+ *      原理：1）WebMvcAutoConfiguration是默认的SpringMVC的自动配置功能类（静态资源...）
  *           2）一旦使用@EnableWebMvc，会@Import(DelegatingWebMvcConfiguration.class)
  *           3）DelegatingWebMvcConfiguration的作用（只保证SpringMVC最基本的使用）
  *              - 获取系统中所有的WebMvcConfigurer，所有功能的定制都由这些一起生效

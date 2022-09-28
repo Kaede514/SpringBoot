@@ -33,14 +33,14 @@ import org.springframework.context.annotation.ComponentScan;
  * 4、编写业务（和以前相同）
  * 5、测试（运行主程序类的main方法即可）
  * 6、简化配置（application.properties）
- * 7、简化部署（引入插件，把项目达成jar包，直接在目标服务器执行即可）
+ * 7、简化部署（引入插件，把项目打成jar包，直接在目标服务器执行即可）
  *
  * SpringBoot自动配置：
  * 自动配好tomcat：1）引入tomcat依赖（web场景的starter中引入了）
  *               2）配置tomcat
  * 自动配好SpringMVC：1）引入SpringMVC全套组件（web场景的starter中引入了）
  *                  2）自动配好SpringMVC常用组件/功能
- * 自动配置好web中的常见功能，如字符编码解析器、视图解析器、文件上传解析器...
+ * 自动配置好web中的常见功能，如字符编码解析器、视图解析器、文件上传解析器、json...
  *                  1）自动配置好了所有web开发的常见场景
  * 默认的包结构：主程序所在的包及下面的所有子包里的所有组件都会被默认扫描到，无需以前
  *             的包扫描配置，也可以手动规定要扫描的包：

@@ -33,7 +33,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *   配置文件的相关属性和xxx进行了绑定。WebMvcProperties==spring.mvc、ResourceProperties==spring.resources
  *   ps：1、一个配置类如果只有一个有参构造器，通过代码可知配置类中有参构造器所有参数的值都会从容器中确定
  *         （使用@Bean注解方法参数会通过Spring自动注入）
- *      2、资源处理的默认规则：配置spring:resources:add-mappings:false，可以禁用所有静态资源路径映射
+ *      2、资源处理的默认规则：配置spring:web:resources:add-mappings:false，可以禁用所有静态资源路径映射
  *
  */
 

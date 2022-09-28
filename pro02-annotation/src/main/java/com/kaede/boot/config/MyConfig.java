@@ -61,7 +61,7 @@ public class MyConfig {
     @Bean   //给容器添加组件，以方法名作为组件的id，返回类型就是组件类型，返回的值就是组件在容器中保存的实例
     public User user01() {
         User zhangsan = new User("zhangsan", 18);
-        //user01组件依赖了cat01  组件
+        //user01组件依赖了cat01组件
         zhangsan.setPet(cat());
         return zhangsan;
     }

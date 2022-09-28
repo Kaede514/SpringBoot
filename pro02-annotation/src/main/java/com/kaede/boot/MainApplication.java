@@ -45,7 +45,7 @@ import org.springframework.context.annotation.ComponentScan;
  *       方法2）查看组件获取的是配置文件的哪个值，然后修改对应的值即可（常用）
  *             xxAutoConfiguration --> 组件 --> 组件从@EnableConfigurationProperties(xxProperties.class)
  *             里获取值 --> xxProperties通过@ConfigurationProperties(prefix="")和配置文件进行绑定 -->
- *             在application.properties中通过前前缀修改配置
+ *             在application.properties中通过前缀修改配置
  *             （xxAutoConfiguration在包org.springframework.boot.autoconfigure下）
  *
  * 最佳实践：

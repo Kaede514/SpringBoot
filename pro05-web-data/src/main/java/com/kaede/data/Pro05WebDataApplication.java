@@ -73,7 +73,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *                      2）若支持，则调用handleReturnValue进行处理
  *       RequestResponseBodyMethodProcessor可以处理返回值标了@ResponseBody注解的返回值
  *          1）利用MessageConverters进行处理，将数据写为json
- *             -内容协商：浏览器在发请求时会在请求头的Accept中告诉服务可以接收的内容类型
+ *             -内容协商：浏览器在发请求时会在请求头的Accept中告诉服务器可以接收的内容类型
  *             -服务器最终根据自身的能力决定服务器能生产出什么样的内容类型的数据
  *             -SpringMVC会挨个遍历所有容器底层的MessageConverter，找出可以处理的
  *    2）SpringMVC所支持的返回值：ModelAndView、Model、View、ResponseEntity、map、
