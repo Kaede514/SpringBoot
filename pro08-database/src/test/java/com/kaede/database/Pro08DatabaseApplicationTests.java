@@ -30,12 +30,12 @@ class Pro08DatabaseApplicationTests {
 
     @Test
     void contextLoads() {
-        Integer i = jdbcTemplate.queryForObject("select count(*) from user", Integer.class);
+        Long i = jdbcTemplate.queryForObject("select count(*) from user", Long.class);
         System.out.println("i = " + i);
         log.info("数据源类型为 {}", dataSource.getClass());
     }
 
-    //@Test
+    @Test
     public void testRedis() {
         ValueOperations<String, String> operations = redisTemplate.opsForValue();
         operations.set("hello", "world");

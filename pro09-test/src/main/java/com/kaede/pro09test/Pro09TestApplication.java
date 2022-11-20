@@ -14,7 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 引入Junit5（spring-boot-starter-test）
  * SpringBoot整合Junit后，测试：1）编写测试方法（@Test需使用Junit5版本的注解）
  *                            2）Junit类具有Spring的功能，如@Autowired（自动装配组件）、
- *                               @Transactional（标注在单元测试方法上，测试完毕后会自动回滚）
+ *                               @Transactional（标注在单元测试方法上，测试完成后会自动回滚）
  * 2、Junit5常用注解
  * @Test：表示该方法为测试方法，可由Jupiter提供额外测试
  * @DisplayName：为测试类或测试方法设置展示名称

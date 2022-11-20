@@ -37,7 +37,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * SpringBoot自动配置了欢迎页的WelcomPageHandlerMapping，访问/能访问到index.html
  *
  * 2、普通参数与基本注解
- *    1）@PathVariable、@RequestParam、@RequestHeader、@RequestBody、@CookieValue、@MatrixVariable
+ *    1）@PathVariable、@RequestParam、@RequestHeader、@RequestBody、@CookieValue
  *    2）ServletAPI
  *    3）Model、Map、ModelMap、ModelAndView
  *    4）自定义对象参数（可以自动类型转换和格式化，可以级联封装）

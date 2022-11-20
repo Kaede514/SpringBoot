@@ -1,5 +1,6 @@
 package com.kaede.principle;
 
+import com.kaede.principle.bean.Color;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -60,9 +61,9 @@ import java.util.Map;
  *    1）创建SpringApplication
  *       1、保存一些信息
  *       2、判断当前项目类型（一般是Servlet）
- *       3、获取所有初始启动引导器（在spring.properties中找Bootstrapper）
- *       4、获取初始化器（在spring.properties中找ApplicationContextInitializer）
- *       5、获取应用监听器（在spring.properties中找ApplicationListener）
+ *       3、获取所有初始启动引导器（在spring.factories中找Bootstrapper）
+ *       4、获取初始化器（在spring.factories中找ApplicationContextInitializer）
+ *       5、获取应用监听器（在spring.factories中找ApplicationListener）
  *    2）运行SpringApplication
  *       1、创建StopWatch（记录应用的启动时间）
  *       2、创建引导上下文（createBootstrapContext）
@@ -70,7 +71,7 @@ import java.util.Map;
  *            方法来完成对引导启动器上下文的环境设置
  *       3、让当前进行进入headless模式
  *       4、获取所有的运行时监听器（RunListener）[方便所有listener进行事件感知]
- *          - 在spring.properties中找SpringApplicationRunListener
+ *          - 在spring.factories中找SpringApplicationRunListener
  *       5、遍历所有的SpringApplicationRunListener调用starting方法
  *          - 相当于通知所有listener项目正在starting
  *       5、保存命令行参数（ApplicationArguments）
@@ -110,15 +111,21 @@ public class Pro12PrincipleApplication {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext run = SpringApplication.run(Pro12PrincipleApplication.class, args);
-        //获取环境变量
-        ConfigurableEnvironment environment = run.getEnvironment();
-        //获取系统的环境变量
-        Map<String, Object> systemEnvironment = environment.getSystemEnvironment();
-        //获取系统的属性
-        Map<String, Object> systemProperties = environment.getSystemProperties();
-        System.out.println(systemEnvironment);
-        System.out.println("================");
-        System.out.println(systemProperties);
+
+        //String[] names = run.getBeanNamesForType(Color.class);
+        //for (int i = 0; i < names.length; i++) {
+        //    System.out.println("names" + i + " = " + names[i]);
+        //}
+
+        ////获取环境变量
+        //ConfigurableEnvironment environment = run.getEnvironment();
+        ////获取系统的环境变量
+        //Map<String, Object> systemEnvironment = environment.getSystemEnvironment();
+        ////获取系统的属性
+        //Map<String, Object> systemProperties = environment.getSystemProperties();
+        //System.out.println(systemEnvironment);
+        //System.out.println("================");
+        //System.out.println(systemProperties);
     }
 
 }

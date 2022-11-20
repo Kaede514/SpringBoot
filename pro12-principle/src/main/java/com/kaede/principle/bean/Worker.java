@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
  * @create 2022-08-31 9:31
  */
 
-@Profile("test")
 @Data
+@Profile("test")
 @Component
 @ConfigurationProperties("person")
 public class Worker implements Person {

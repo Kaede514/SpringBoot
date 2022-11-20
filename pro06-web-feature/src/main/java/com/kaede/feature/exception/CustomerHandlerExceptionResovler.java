@@ -24,7 +24,7 @@ public class CustomerHandlerExceptionResovler implements HandlerExceptionResolve
     @Override
     public ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {
         try {
-            //会交给tomcat处理
+            //交给tomcat处理
             response.sendError(511, "我指定的错误");
         } catch (IOException e) {
             e.printStackTrace();

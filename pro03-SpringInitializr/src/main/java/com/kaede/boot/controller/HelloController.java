@@ -18,8 +18,6 @@ public class HelloController {
 
     @RequestMapping("/person")
     public Person person() {
-        String userName = person.getUserName();
-        System.out.println(userName);
         return person;
     }
 

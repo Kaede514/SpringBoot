@@ -3,28 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Title</title>
-
-	<link rel="stylesheet" th:href="@{/css/main.css}">
 </head>
 <body>
 
-<div>
-	<div id="div1" style="margin: 0;padding: 0">
-		<h1>main.html</h1>
-	</div>
-	<div id="div2" style="margin: 0;padding: 0">
-		<span>[[${session.loginUser.userName}]]</span>
-	</div>
-	</div>
-	<div id="div3">
-		<br/>
-		<a th:href="@{/table}">table</a><br/>
-		<br/>
-		<a th:href="@{/form}">form</a><br/>
-		<br/>
-		<a th:href="@{/ex}">ex</a>
-	</div>
-</div>
+<h1>main.html</h1>
+
+<span>[[${session.loginUser.userName}]]</span><br/>
+
+<a th:href="@{/testerror}">testerror</a><br/>
+<a th:href="@{/ex}">ex</a><br/>
 
 </body>
 </html>

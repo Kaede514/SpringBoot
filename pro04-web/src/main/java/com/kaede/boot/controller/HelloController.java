@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    //返回的是aaa，而不是图片
     @RequestMapping("/lunasama.jpg")
     public String hello() {
         return "aaa";

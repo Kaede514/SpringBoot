@@ -37,7 +37,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         //拦截住，未登录，跳转到登录页
         //session.setAttribute("msg","请先登录");
         //重定向取不出变量
-        //response.sendRedirect("/");
+        //response.sendRedirect("/web/");
         //th:text="${msg}" 获取请求域中的数据
         //th:text="${session.msg}" 获取会话域中的数据
         request.setAttribute("msg","请先登录");
@@ -56,4 +56,5 @@ public class LoginInterceptor implements HandlerInterceptor {
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
         HandlerInterceptor.super.afterCompletion(request, response, handler, ex);
     }
+
 }

@@ -29,7 +29,7 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <!-- 1、直接依赖引入具体版本（maven的就近依赖原则） -->
-            <!-- <version>5.1.37</version> -->
+            <version>5.1.37</version>
         </dependency>
         <!-- 引入druid数据源（内含druid自动配置类） -->
         <!-- <dependency>
@@ -57,6 +57,13 @@
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>2.1.4</version>
+        </dependency>
+
+        <!-- 引入MyBatisPlus依赖starter -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.5.1</version>
         </dependency>
 
         <!-- 引入redis依赖 -->

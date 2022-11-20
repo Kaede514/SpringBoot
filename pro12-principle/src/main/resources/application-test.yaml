@@ -1,5 +1,5 @@
 person:
-  name: zhangsan
+  name: test-kaede
 
 server:
   port: 8080

@@ -16,4 +16,5 @@ public class CustomizationBean implements WebServerFactoryCustomizer<Configurabl
     public void customize(ConfigurableServletWebServerFactory factory) {
         factory.setPort(8088);
     }
+
 }

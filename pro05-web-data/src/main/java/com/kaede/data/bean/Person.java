@@ -15,10 +15,8 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Person {
-
     private String userName;
     private Integer age;
     private Date birth;
     private Pet pet;
-
 }

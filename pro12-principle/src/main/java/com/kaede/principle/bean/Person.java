@@ -6,9 +6,6 @@ package com.kaede.principle.bean;
  */
 
 public interface Person {
-
     String getName();
-
     Integer getAge();
-
 }

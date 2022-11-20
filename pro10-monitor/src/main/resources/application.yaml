@@ -1,6 +1,6 @@
 management:
   endpoints:
-    # 关闭所有监控端点（默认开启）
+    # 默认开启所有的监控端点
     # 开启让第三方开源项目获取所有信息
     enabled-by-default: true
     web:
@@ -24,7 +24,7 @@ management:
       enabled: true
 
 info:
-  appName: boot-monitor
+  myAppName: boot-monitor
   appVersion: 1.0.0
   author: kaede
   # 从pom.xml中获取信息
@@ -40,7 +40,6 @@ spring:
         instance:
           # 默认使用主机名注册实例，可以改为使用IP注册实例
           # http://desktop-faro1oo:8080/
-          # http://192.168.10.22:8080/
           prefer-ip: true
   application:
     # 修改当前应用名，默认名是spring-boot-application

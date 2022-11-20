@@ -31,10 +31,6 @@ public class KaedeMessageConverter implements HttpMessageConverter<Person> {
         return clazz.isAssignableFrom(Person.class);
     }
 
-    /**
-     * 服务器要统计所有MessageConverter都能写出哪些内容类型
-     * application/x-kaede
-     */
     @Override
     public List<MediaType> getSupportedMediaTypes() {
         return MediaType.parseMediaTypes("application/x-kaede");
@@ -52,4 +48,5 @@ public class KaedeMessageConverter implements HttpMessageConverter<Person> {
         OutputStream body = outputMessage.getBody();
         body.write(data.getBytes());
     }
+
 }

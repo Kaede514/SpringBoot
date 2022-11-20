@@ -28,31 +28,20 @@ import java.util.Map;
  */
 
 @Configuration(proxyBeanMethods = false)
-public class WebConfig /*implements WebMvcConfigurer*/ {
+public class WebConfig {
 
-    @Bean
+    /*@Bean
     public HiddenHttpMethodFilter hiddenHttpMethodFilter() {
         HiddenHttpMethodFilter methodFilter = new HiddenHttpMethodFilter();
         //自定义_method的名字
         methodFilter.setMethodParam("_m");
         return methodFilter;
-    }
-
+    }*/
 
     //WebMvcConfigurer定制化SpringMVC功能
     @Bean
     public WebMvcConfigurer webMvcConfigurer() {
         return new WebMvcConfigurer() {
-            //配置路径映射规则
-            //方法1：将该组件放入IOC容器
-            @Override
-            public void configurePathMatch(PathMatchConfigurer configurer) {
-                UrlPathHelper urlPathHelper = new UrlPathHelper();
-                //设置为不移除;后的内容，矩阵变量功能就可以生效
-                urlPathHelper.setRemoveSemicolonContent(false);
-                configurer.setUrlPathHelper(urlPathHelper);
-            }
-
             //自定义Converter类型转换
             @Override
             public void addFormatters(FormatterRegistry registry) {
@@ -95,13 +84,5 @@ public class WebConfig /*implements WebMvcConfigurer*/ {
             }
         };
     }
-
-    //方法2：实现接口，重写方法
-    /*@Override
-    public void configurePathMatch(PathMatchConfigurer configurer) {
-        UrlPathHelper urlPathHelper = new UrlPathHelper();
-        urlPathHelper.setRemoveSemicolonContent(false);
-        configurer.setUrlPathHelper(urlPathHelper);
-    }*/
 
 }

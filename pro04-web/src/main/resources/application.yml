@@ -1,0 +1,10 @@
+#spring:
+#  mvc:
+#    static-path-pattern: /res/** # 默认是/**
+#  web:
+#    resources:
+#       改完之后只能访问该文件夹下的静态资源，也可以用数组写法写多个
+#      static-locations: classpath:/static2/
+#       设置静态资源路径映射规则，默认为true，false则禁用所有静态资源路径映射
+#      add-mappings: false
+

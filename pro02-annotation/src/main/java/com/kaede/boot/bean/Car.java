@@ -25,7 +25,7 @@ import org.springframework.stereotype.Component;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Component
+//@Component
 @ConfigurationProperties(prefix = "mycar")
 public class Car {
 

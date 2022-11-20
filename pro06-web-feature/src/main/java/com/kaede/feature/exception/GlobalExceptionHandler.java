@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
  */
 
 //标记为异常处理器
-@ControllerAdvice
+/*@ControllerAdvice
 @Slf4j
 public class GlobalExceptionHandler {
 
@@ -20,7 +20,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler({ArithmeticException.class,NullPointerException.class})
     public String handlerArithException(Exception ex) {
         log.error("异常是：{}", ex);
-        return "admin_login";  //视图地址或ModelAndView
+        return "admin_main";  //视图地址或ModelAndView
     }
 
-}
+}*/

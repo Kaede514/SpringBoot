@@ -1,4 +1,4 @@
-package com.kaede.hello.service;
+package com.kaede.hello.property.service;
 
 import com.kaede.hello.property.HelloProperties;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.aop.AopAutoConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
@@ -84,62 +85,65 @@ import org.springframework.context.annotation.ComponentScan;
 public class MainApplication {
 
     public static void main(String[] args) {
-        //1、返回IOC容器
+        //返回IOC容器
         ConfigurableApplicationContext run = SpringApplication.run(MainApplication.class, args);
 
-        //2、查看容器里的组件
-        String[] names = run.getBeanDefinitionNames();
+        //查看容器里的组件
+        /*String[] names = run.getBeanDefinitionNames();
         for (String name : names) {
             System.out.println(name);
-        }
+        }*/
 
-        //3、从容器中获取组件，发现组件默认是单实例的
-        Pet cat01 = run.getBean("cat01", Pet.class);
-        Pet cat02 = run.getBean("cat01", Pet.class);
-        System.out.println("cat01 == cat02：" + (cat01 == cat02));
+        //从容器中获取组件，发现组件默认是单实例的
+        //Pet cat01 = run.getBean("cat01", Pet.class);
+        //Pet cat02 = run.getBean("cat01", Pet.class);
+        //System.out.println("cat01 == cat02：" + (cat01 == cat02));
 
         /*
-            4、@Configuration中的proxyBeanMethods，若为
+            @Configuration中的proxyBeanMethods，若为
             true  com.kaede.boot.config.MyConfig$$EnhancerBySpringCGLIB$$e8095533@bf71cec
             false  com.kaede.boot.config.MyConfig@1da6ee17
         */
-        MyConfig myConfig = run.getBean(MyConfig.class);
-        System.out.println(myConfig);
+        //MyConfig myConfig = run.getBean(MyConfig.class);
+        //System.out.println(myConfig);
 
         /*
             若@Configuration(proxyBeanMethods = true)，则为代理对象调用方法，SpringBoot
             总会检查这个组件是否在容器中有，若有则不会创建新对象，保持组件单实例，结果为true
             若@Configuration(proxyBeanMethods = false)，则结果为false
         */
-        User user01 = myConfig.user01();
-        User user02 = myConfig.user01();
-        System.out.println("user01 == user02：" + (user01 == user02));
+        //User user01 = myConfig.user01();
+        //User user02 = myConfig.user01();
+        //System.out.println("user01 == user02：" + (user01 == user02));
 
         //当user01组件依赖cat01组件时
-        User user03 = run.getBean("user01", User.class);
-        Pet cat03 = run.getBean("cat01", Pet.class);
+        //User user01 = run.getBean("user01", User.class);
+        //Pet cat01 = run.getBean("cat01", Pet.class);
         //若proxyBeanMethods = false，则为false
-        System.out.println("user03.getPet() == cat03：" + (user03.getPet() == cat03));
+        //System.out.println("user01.getPet() == cat01：" + (user01.getPet() == cat01));
 
-        //5、获取组件
-        String[] beanNamesForType = run.getBeanNamesForType(User.class);
-        System.out.println("=========================================");
-        for (String s : beanNamesForType) {
-            System.out.println(s);
-        }
+        //获取组件
+        //String[] beanNamesForType = run.getBeanNamesForType(User.class);
+        //for (String s : beanNamesForType) {
+        //    System.out.println(s);
+        //}
 
-        DBHelper helper = run.getBean(DBHelper.class);
-        System.out.println("helper = " + helper);
+        //DBHelper helper = run.getBean(DBHelper.class);
+        //System.out.println("helper = " + helper);
 
-        /*
-            报错，设置@ConditionalOnBean(name = "cat02")后不满足条件，故未加入IOC容器
-            MyConfig myConfig = run.getBean(MyConfig.class);
-            User user04 = myConfig.user01();
-            System.out.println(user04);
-        */
+        //报错，设置@ConditionalOnBean(name = "cat01")后不满足条件，故未加入IOC容器
+        //User user = myConfig.user01();
+        //System.out.println("user = " + user);
 
-        System.out.println("xmlUser: " + run.containsBean("xmlUser"));
-        System.out.println("xmlCat: " + run.containsBean("xmlCat"));
+        /*boolean user01 = run.containsBean("user01");
+        System.out.println("user01 = " + user01);
+        boolean cat01 = run.containsBean("cat01");
+        System.out.println("cat01 = " + cat01);*/
+
+        //Object xmlUser = run.getBean("xmlUser");
+        //System.out.println("xmlUser = " + xmlUser);
+        //Object xmlCat = run.getBean("xmlCat");
+        //System.out.println("xmlCat = " + xmlCat);
     }
 
 }

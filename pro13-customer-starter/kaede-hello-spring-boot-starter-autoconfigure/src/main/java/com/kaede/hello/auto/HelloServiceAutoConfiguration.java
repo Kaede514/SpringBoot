@@ -1,7 +1,7 @@
 package com.kaede.hello.auto;
 
 import com.kaede.hello.property.HelloProperties;
-import com.kaede.hello.service.HelloService;
+import com.kaede.hello.property.service.HelloService;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;

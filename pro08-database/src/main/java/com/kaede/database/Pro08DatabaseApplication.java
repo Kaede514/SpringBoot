@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 数据访问
  * SQL
  * 1、数据源的自动配置
- *    1）导入jdbc场景（内含数据源、jdbc、事务、）
+ *    1）导入jdbc场景（内含数据源、jdbc、事务）
  *    2）导入mysql驱动
  *       若要修改版本：1、直接依赖引入具体版本（maven的就近依赖原则）
  *                   2、重新声明版本（maven的属性的就近优先原则）
@@ -61,7 +61,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *       - 底层只要使用RedisTemplate、StringRedisTemplate就可以操作redis
  * 2、redis客户端由lettuce切换为jedis
  *    引入jedis依赖，然后移除lettuce依赖或配置redis
- *
  *
  */
 

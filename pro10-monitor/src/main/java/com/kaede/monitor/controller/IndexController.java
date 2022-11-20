@@ -22,6 +22,7 @@ public class IndexController {
 
     Counter counter;
 
+    //构造器注入
     public IndexController(MeterRegistry meterRegistry) {
         //自定义将要展示的指标名
         counter = meterRegistry.counter("indexController.index.count");

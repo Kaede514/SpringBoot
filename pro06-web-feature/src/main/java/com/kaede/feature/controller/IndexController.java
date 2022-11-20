@@ -41,7 +41,7 @@ public class IndexController {
     //去main页面
     @GetMapping("/main")
     public String mainPage(HttpSession session, Model model) {
-        //判断是否登录（最好使用拦截器或者过滤器等）
+        /*//判断是否登录（最好使用拦截器或者过滤器等）
         Object loginUser = session.getAttribute("loginUser");
         if(loginUser != null) {
             return "admin_main";
@@ -49,7 +49,8 @@ public class IndexController {
             //回到登录页
             model.addAttribute("msg", "请重新登录");
             return "admin_login";
-        }
+        }*/
+        return "admin_main";
     }
 
 }

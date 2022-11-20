@@ -21,6 +21,7 @@ import java.util.Arrays;
 //@Configuration
 public class MyDataSourceConfig {
 
+    //默认的自动配置是判断容器中没有数据源才会放Hikari数据源
     //将属性与配置文件中的值绑定
     @ConfigurationProperties(prefix = "spring.datasource")
     @Bean
@@ -36,10 +37,10 @@ public class MyDataSourceConfig {
     }
 
     //配置druid的监控页功能
-    //http://localhost:8080/druid即可访问监控页
     @Bean
     public ServletRegistrationBean statViewServlet() {
         StatViewServlet statViewServlet = new StatViewServlet();
+        //http://localhost:8080/druid即可访问监控页
         ServletRegistrationBean<StatViewServlet> registrationBean = new ServletRegistrationBean<>(statViewServlet, "/druid/*");
         //添加查看监控页所需的账号密码验证
         registrationBean.addInitParameter("loginUsername", "kaede");

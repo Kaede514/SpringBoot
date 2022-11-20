@@ -35,6 +35,7 @@ public class MyComponentHealthIndicator extends AbstractHealthIndicator {
             map.put("err", "连接超时");
             map.put("ms", 3000);
         }
+        //更详细的信息
         builder.withDetail("code", 100).withDetails(map);
     }
 

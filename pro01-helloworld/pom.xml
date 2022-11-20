@@ -9,11 +9,6 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <!-- 引入SpringBoot进行开发所需，作为父项目管理依赖（版本统一），
-        它的父项目spring-boot-dependencies几乎声明了所有开发中常用的
-        jar的版本号（自动版本仲裁机制），以后引入依赖默认都可以不写版本
-        号，但引入的非版本仲裁的jar一定要写版本号
-    -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -29,12 +24,7 @@
     </properties>
 
     <dependencies>
-        <!-- 引入SpringBoot进行web开发所需，因为有父项目进行版本管理，故无需写版本号
-            在SpringBoot中经常见到spring-boot-starter-*，*代表某种场景，只要引入
-            某种场景的starter，该场景所需要的常规依赖都会自动引入（maven的依赖传递原则）
-            （像*-spring-boot-starter-xx一般是第三方提供的简化开发的场景启动器），所有
-            场景启动器最底层的依赖都会依赖spring-boot-starter
-        -->
+        <!-- 引入SpringBoot进行web开发所需，因为有父项目进行版本管理，故无需写版本号 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -49,10 +39,6 @@
         </dependency>
     </dependencies>
 
-    <!-- maven默认打包方式为jar，以前将项目打成war包，然后将war包部署到tomcat
-        服务器上运行，现在简化部署，只需引入SpringBoot提供的以下插件，就可将项目
-        打成自带整套运行环境的jar包
-    -->
     <build>
         <plugins>
             <plugin>

@@ -15,7 +15,7 @@ public class HelloController {
 
     @RequestMapping("/hello")
     public String  handle01() {
-        return "hello, SpringBoot! 测试乱码";
+        return "hello, SpringBoot! 你好";
     }
 
 }

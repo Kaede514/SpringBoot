@@ -1,10 +1,10 @@
 person:
-  name: default
+  name: kaede
 
 spring:
   profiles:
     # 激活特定环境
-#    active: online
+#    active: test
     # 根据组激活环境
     active: myonline
     # 分组

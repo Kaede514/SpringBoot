@@ -1,6 +1,6 @@
 package com.kaede.hellotest.controller;
 
-import com.kaede.hello.service.HelloService;
+import com.kaede.hello.property.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

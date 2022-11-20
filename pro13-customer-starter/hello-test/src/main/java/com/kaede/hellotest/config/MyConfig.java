@@ -1,6 +1,6 @@
 package com.kaede.hellotest.config;
 
-import com.kaede.hello.service.HelloService;
+import com.kaede.hello.property.service.HelloService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

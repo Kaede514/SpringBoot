@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class HelloController {
-
     @GetMapping("/user")
     public String getUser(){
         return "GET-张三";
@@ -29,5 +28,4 @@ public class HelloController {
     public String deleteUser(){
         return "DELETE-张三";
     }
-
 }

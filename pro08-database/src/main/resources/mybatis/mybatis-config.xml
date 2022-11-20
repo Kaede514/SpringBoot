@@ -11,7 +11,7 @@
     -->
 
     <settings>
-        <!--将下划线映射为驼峰-->
+        <!-- 将下划线映射为驼峰 -->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
 
@@ -19,10 +19,6 @@
     <typeAliases>
         <package name="com.kaede.database.pojo"/>
     </typeAliases>
-
-    <mappers>
-        <mapper resource="mybatis/mapper/UserMapper.xml"/>
-    </mappers>
 
 </configuration>
 

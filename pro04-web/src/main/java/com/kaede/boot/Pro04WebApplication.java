@@ -25,14 +25,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *      访问路径 = 当前项目 + 配置文件中spring:mvc:static-path-pattern的前缀 + 静态资源名
  *    3）支持webjars
  * 2、欢迎页支持（可直接通过localhost:8080/访问）
- *    1）静态资源路径下放入index.html（可以配置静态资源的路径，但配置静态资源的访问前缀会失效）
- *    2）编写一个能处理/index请求的controller（配置静态资源的访问前缀不会失效）
+ *    静态资源路径下放入index.html（可以配置静态资源的路径，但配置静态资源的访问前缀会失效）
  * 3、静态资源配置原理
  *   SpringBoot启动默认加载 xxxAutoConfiguration类（自动配置类）
  *   SpringMVC功能的自动配置类WebMvcAutoConfiguration
  *   配置文件的相关属性和xxx进行了绑定。WebMvcProperties==spring.mvc、ResourceProperties==spring.resources
  *   ps：1、一个配置类如果只有一个有参构造器，通过代码可知配置类中有参构造器所有参数的值都会从容器中确定
- *         （使用@Bean注解方法参数会通过Spring自动注入）
  *      2、资源处理的默认规则：配置spring:web:resources:add-mappings:false，可以禁用所有静态资源路径映射
  *
  */

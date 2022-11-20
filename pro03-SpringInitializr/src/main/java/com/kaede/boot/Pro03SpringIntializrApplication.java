@@ -19,7 +19,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 		2）k:
  * 		     k1: v1
  * 		     k2: v2
- * 数组：1）行内写法：k: [v1, v2]
+ * 数组：1）行内写法：k: [k1, k2]
  * 		2）k:
  * 		     - k1
  * 		     - k2

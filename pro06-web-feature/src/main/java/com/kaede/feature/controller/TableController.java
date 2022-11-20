@@ -17,16 +17,10 @@ import java.util.List;
 @Controller
 public class TableController {
 
-    @GetMapping("/table")
-    public String basicTable(Model model) {
-        List<User> users = Arrays.asList(
-                new User("zhangsan", "123456"),
-                new User("lisi", "123645"),
-                new User("wangwu", "123564")
-        );
-        model.addAttribute("users", users);
+    @GetMapping("/testerror")
+    public String testError(Model model) {
         int i = 10 / 0;
-        return "table/table";
+        return "admin_main";
     }
 
     @GetMapping("/ex")
